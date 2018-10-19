@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>CUMT空气检测</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="static/styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="static/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="static/styles/responsive.css">
+<style type="text/css">
+	body {
+		padding: 0;
+		margin: 0;
+		background: #fff
+		}
+		.btn-container{
+			padding: 1em 0;
+			text-align: center;
+		}
+	.container{
+		width: 700px;
+		margin: 50px auto;
+	}
+</style>
+	<script src="static/js/gauge.min.js"></script>
+</head>
+
+<body>
+
+<div class="super_container">
+	<header class="header d-flex flex-row justify-content-end align-items-center trans_200">
+		<div class="logo mr-auto">
+			<a href="#">CUMT<span>空气</span></a>
+		</div>
+
+		<nav class="main_nav justify-self-end text-right">
+			<ul>
+				<li class="active"><a href="#">CUMT</a></li>
+			</ul>
+		</nav>	
+	</header>
+
+	<div class="home">
+		<div class="home_background_container prlx_parent">
+			<div class="home_background prlx" style="background-image:url(static/images/slider_background.jpg)"></div>
+		</div>
+		
+		<div style="margin: 0 auto;   text-align: center;">
+			<br><br><br><br>
+					<canvas data-type="radial-gauge"
+				data-width="300"
+				data-height="300"
+				data-units="ppm"
+				data-title="false"
+				data-value="{{.qua}}"
+				data-animate-on-init="true"
+				data-animated-value="true"
+				data-min-value="0"
+				data-max-value="600"
+				data-major-ticks="0,50,100,150,200,250,300,350,400,450,500,550"
+				data-minor-ticks="2"
+				data-stroke-ticks="false"
+				data-highlights='[
+					{ "from": 0, "to": 50, "color": "rgba(0,255,0,.15)" },
+					{ "from": 50, "to": 100, "color": "rgba(255,255,0,.15)" },
+					{ "from": 100, "to": 200, "color": "rgba(255,30,0,.25)" },
+					{ "from": 200, "to": 300, "color": "rgba(255,0,225,.25)" },
+					{ "from": 300, "to": 550, "color": "rgba(0,0,255,.25)" }
+				]'
+				data-color-plate="transparent"
+				data-color-major-ticks="#f5f5f5"
+				data-color-minor-ticks="#ddd"
+				data-color-title="#fff"
+				data-color-units="#ccc"
+				data-color-numbers="#eee"
+				data-color-needle-start="rgba(240, 128, 128, 1)"
+				data-color-needle-end="rgba(255, 160, 122, .9)"
+				data-value-box="true"
+				data-animation-rule="bounce"
+				data-animation-duration="500"
+				data-font-value="Led"
+				data-font-numbers="Led"
+				data-border-outer-width="3"
+				data-border-middle-width="3"
+				data-border-inner-width="3"
+		></canvas>
+				</div>
+<br><br>
+        <div style="margin: 0 auto;text-align: center;">
+        <div class="btn-group btn-group-justified">
+        <a href="/" class="btn btn-primary">返回主页</a>
+</div></div>
+	
+		</div>
+	</div>
+<script src="static/js/jquery-3.2.1.min.js"></script>
+<script src="static/styles/bootstrap4/popper.js"></script>
+<script src="static/styles/bootstrap4/bootstrap.min.js"></script>
+
+</body>
+
+</html>

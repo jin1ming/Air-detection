@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>CUMT空气检测</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="static/styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="static/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="static/styles/responsive.css">
+<style type="text/css">
+	body {
+		padding: 0;
+		margin: 0;
+		background: #fff
+		}
+		.btn-container{
+			padding: 1em 0;
+			text-align: center;
+		}
+	.container{
+		width: 700px;
+		margin: 50px auto;
+	}
+</style>
+	<script src="static/js/gauge.min.js"></script>
+</head>
+
+<body>
+
+<div class="super_container">
+	<header class="header d-flex flex-row justify-content-end align-items-center trans_200">
+		<div class="logo mr-auto">
+			<a href="#">CUMT<span>空气</span></a>
+		</div>
+
+		<nav class="main_nav justify-self-end text-right">
+			<ul>
+				<li class="active"><a href="#">CUMT</a></li>
+			</ul>
+		</nav>	
+	</header>
+
+	<div class="home">
+		<div class="home_background_container prlx_parent">
+			<div class="home_background prlx" style="background-image:url(static/images/slider_background.jpg)"></div>
+		</div>
+		<div style="margin: 0 auto;   text-align: center;">
+			<br><br><br><br>
+			<canvas data-type="radial-gauge"
+    data-width="300"
+    data-height="300"
+    data-units="°C"
+    data-value="{{.tem}}"
+    data-title="Temperature"
+    data-min-value="-50"
+    data-max-value="50"
+    data-major-ticks="[-50,-40,-30,-20,-10,0,10,20,30,40,50]"
+    data-minor-ticks="2"
+    data-stroke-ticks="true"
+    data-highlights="[ {&quot;from&quot;: -50, &quot;to&quot;: 0, &quot;color&quot;: &quot;rgba(0,0, 255, .3)&quot;}, {&quot;from&quot;: 0, &quot;to&quot;: 50, &quot;color&quot;: &quot;rgba(255, 0, 0, .3)&quot;} ]"
+    data-ticks-angle="225"
+    data-start-angle="67.5"
+    data-color-major-ticks="#ddd"
+    data-color-minor-ticks="#ddd"
+    data-color-title="#eee"
+    data-color-units="#ccc"
+    data-color-numbers="#eee"
+    data-color-plate="#222"
+    data-border-shadow-width="0"
+    data-borders="true"
+    data-needle-type="arrow"
+    data-needle-width="2"
+    data-needle-circle-size="7"
+    data-needle-circle-outer="true"
+    data-needle-circle-inner="false"
+    data-animation-duration="1500"
+    data-animation-rule="linear"
+    data-color-border-outer="#333"
+    data-color-border-outer-end="#111"
+    data-color-border-middle="#222"
+    data-color-border-middle-end="#111"
+    data-color-border-inner="#111"
+    data-color-border-inner-end="#333"
+    data-color-needle-shadow-down="#333"
+    data-color-needle-circle-outer="#333"
+    data-color-needle-circle-outer-end="#111"
+    data-color-needle-circle-inner="#111"
+    data-color-needle-circle-inner-end="#222"
+    data-value-box-border-radius="{{.tem}}"
+    data-color-value-box-rect="#222"
+    data-color-value-box-rect-end="#333"
+></canvas>
+				</div>
+	<br><br>
+	<div style="margin: 0 auto;text-align: center;">
+	<div class="btn-group btn-group-justified">
+        <a href="/" class="btn btn-primary">返回主页</a>
+</div></div>
+	
+		</div>
+	</div>
+<script src="static/js/jquery-3.2.1.min.js"></script>
+<script src="static/styles/bootstrap4/popper.js"></script>
+<script src="static/styles/bootstrap4/bootstrap.min.js"></script>
+
+</body>
+
+</html>
